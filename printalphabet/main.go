@@ -8,6 +8,5 @@ func main() {
 	for i := 0; i <= 25; i++ {
 		z01.PrintRune(rune(aRune[i]))
 	}
-	z01.PrintRune('\n')
 
 }
