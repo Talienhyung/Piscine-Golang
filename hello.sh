@@ -1,3 +1,1 @@
-$ bash hello.sh
-Hello $USER!
-$
+echo "Hello $USER!"
