@@ -10,7 +10,8 @@ func PrintNbr(n int) {
 		z01.PrintRune('-')
 		n = -n
 	}
-	digits := make([]rune, 0)
+	var digits []rune
+	digits = make([]rune, 3)
 	for n > 0 {
 		digits = append(digits, rune(n%10+'0'))
 		n = n / 10
