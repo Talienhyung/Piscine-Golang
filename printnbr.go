@@ -11,7 +11,7 @@ func PrintNbr(n int) {
 		n = -n
 	}
 	var digits []rune
-	digits = make([]rune, 3)
+	digits = make([]rune, 0)
 	for n > 0 {
 		digits = append(digits, rune(n%10+'0'))
 		n = n / 10
