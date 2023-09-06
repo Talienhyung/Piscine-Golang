@@ -10,7 +10,7 @@ func PrintNbr(n int) {
 		z01.PrintRune('-')
 		n = -n
 	}
-	digits := make([]int, 0)
+	digits := make([]int, 3)
 	for n > 0 {
 		p := n % 10
 		digits = append(digits, p)
