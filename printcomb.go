@@ -8,8 +8,8 @@ func PrintComb() {
 			for k := 0; k <= 10; k++ {
 				if i < j && j < k {
 					z01.PrintRune(rune(i))
-					z01.PrintRune(rune(i))
-					z01.PrintRune(rune(i))
+					z01.PrintRune(rune(j))
+					z01.PrintRune(rune(k))
 					if i != 7 || j != 8 || k != 9 {
 						z01.PrintRune(rune(','))
 						z01.PrintRune(rune(' '))
