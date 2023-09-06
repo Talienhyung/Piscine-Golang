@@ -17,7 +17,7 @@ func PrintComb2() {
 							z01.PrintRune(rune(','))
 							z01.PrintRune(rune(' '))
 						}
-					} else if i < k && j <= l {
+					} else if i < k && j >= l {
 						z01.PrintRune(i)
 						z01.PrintRune(j)
 						z01.PrintRune(' ')
@@ -28,7 +28,6 @@ func PrintComb2() {
 							z01.PrintRune(rune(' '))
 						}
 					}
-
 				}
 			}
 		}
