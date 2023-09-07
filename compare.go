@@ -2,7 +2,7 @@ package piscine
 
 func Compare(a, b string) int {
 	lenea := len(a) - 1
-	leneb := len(a) - 1
+	leneb := len(b) - 1
 	lettre := a[0]
 	lettre2 := b[0]
 	lettre3 := a[lenea]
