@@ -1,8 +1,16 @@
 package piscine
 
 func Compare(a, b string) int {
-	lenea := len(a) - 1
-	leneb := len(b) - 1
+	lena := 0
+	for range a {
+		lena++
+	}
+	lenb := 0
+	for range b {
+		lenb++
+	}
+	lenea := lena - 1
+	leneb := lenb - 1
 	lettre := a[0]
 	lettre2 := b[0]
 	lettre3 := a[lenea]
@@ -16,5 +24,5 @@ func Compare(a, b string) int {
 	if lettre != lettre2 && lettre3 == lettre4 {
 		return -1
 	}
-	return 0
+	return 1
 }
