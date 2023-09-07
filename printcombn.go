@@ -77,20 +77,17 @@ func PrintCombN(n int) {
 				for k := '0'; k <= '9'; k++ {
 					for l := '0'; l <= '9'; l++ {
 						for m := '0'; m <= '9'; m++ {
-							for n := '0'; n <= '9'; n++ {
-								if i < j && j < k && k < l && l < m && m < n {
-									z01.PrintRune(i)
-									z01.PrintRune(j)
-									z01.PrintRune(k)
-									z01.PrintRune(l)
-									z01.PrintRune(m)
-									z01.PrintRune(n)
-									if i != '4' || j != '5' || k != '6' || l != '7' || m != '8' || n != '9' {
-										z01.PrintRune(rune(','))
-										z01.PrintRune(rune(' '))
-									} else {
-										z01.PrintRune(rune('\n'))
-									}
+							if i < j && j < k && k < l && l < m {
+								z01.PrintRune(i)
+								z01.PrintRune(j)
+								z01.PrintRune(k)
+								z01.PrintRune(l)
+								z01.PrintRune(m)
+								if i != '4' || j != '5' || k != '6' || l != '7' || m != '8' {
+									z01.PrintRune(rune(','))
+									z01.PrintRune(rune(' '))
+								} else {
+									z01.PrintRune(rune('\n'))
 								}
 							}
 						}
