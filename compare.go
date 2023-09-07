@@ -16,4 +16,5 @@ func Compare(a, b string) int {
 	if lettre != lettre2 && lettre3 == lettre4 {
 		return -1
 	}
+	return 0
 }
