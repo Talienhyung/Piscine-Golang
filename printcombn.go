@@ -83,7 +83,7 @@ func PrintCombN(n int) {
 								z01.PrintRune(k)
 								z01.PrintRune(l)
 								z01.PrintRune(m)
-								if i != '4' || j != '5' || k != '6' || l != '7' || m != '8' {
+								if i != '5' || j != '6' || k != '7' || l != '8' || m != '9' {
 									z01.PrintRune(rune(','))
 									z01.PrintRune(rune(' '))
 								} else {
