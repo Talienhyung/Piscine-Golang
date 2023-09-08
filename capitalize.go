@@ -19,7 +19,6 @@ func Capitalize(s string) string {
 			} else {
 				car = append(car, string(s[i]))
 			}
-
 		} else {
 			car = append(car, string(s[i]))
 		}
