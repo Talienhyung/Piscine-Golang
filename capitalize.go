@@ -17,7 +17,7 @@ func Capitalize(s string) string {
 					car = append(car, string(s[i]-32))
 				}
 			} else {
-				car = append(car, string(s[i]))
+				car = append(car, string(s[i]-32))
 			}
 		} else if s[i] >= 'A' && s[i] <= 'Z' {
 			if i > 0 {
