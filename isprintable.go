@@ -14,3 +14,15 @@ func IsPrintable(s string) bool {
 	}
 	return true
 }
+
+func IsPrintable2(s string) bool {
+	i := 0
+	for range s {
+		if s[i] >= 32 && s[i] <= 126 {
+			i++
+		} else {
+			return false
+		}
+	}
+	return true
+}
