@@ -8,7 +8,6 @@ func PrintNbrBase(nbr int, base string) {
 		z01.PrintRune('V')
 		return
 	}
-
 	for i, c := range base {
 		for j, d := range base {
 			if i != j && c == d {
@@ -18,7 +17,6 @@ func PrintNbrBase(nbr int, base string) {
 			}
 		}
 	}
-
 	for _, c := range base {
 		if c == '+' || c == '-' {
 			z01.PrintRune('N')
@@ -31,10 +29,14 @@ func PrintNbrBase(nbr int, base string) {
 	sign := 1
 	if nbr < 0 {
 		sign = -1
-		nbr = -nbr
+	}
+	digits := []rune{}
+
+	for nbr < 0 {
+		digits = append(digits, rune(base[nbr%length*-1]))
+		nbr /= length
 	}
 
-	digits := []rune{}
 	for nbr > 0 {
 		digits = append(digits, rune(base[nbr%length]))
 		nbr /= length
