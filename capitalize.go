@@ -1,7 +1,7 @@
 package piscine
 
 func Capitalize(s string) string {
-	car := make([]string, 0)
+	var car []string
 	i := 0
 	var non string
 	for range s {
