@@ -46,7 +46,6 @@ func validationManger(i int, j int, s []int) string {
 		if s[i+j] == s[i]+j || s[i+j] == s[i]-j {
 			return "false"
 		}
-
 	} else if i-j >= 0 {
 		if s[i-j] == s[i]+j || s[i-j] == s[i]-j {
 			return "false"
