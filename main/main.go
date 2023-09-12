@@ -6,5 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.Concat("HollO", "uufn"))
+	arg := 4
+	fmt.Println(piscine.IterativeFactorial(arg))
 }
