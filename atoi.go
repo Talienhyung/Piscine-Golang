@@ -16,7 +16,7 @@ func Atoi(s string) int {
 			nega = -1
 		} else if c == '+' && nega == 2 && c == rune(s[0]) {
 			nega = 1
-		} else if (c == '-' || c == '+') && (nega == -1 || nega == 1) && c != rune(s[0]+'0') {
+		} else if (c == '-' || c == '+') && (nega == -1 || nega == 1) {
 			return 0
 		}
 	}
