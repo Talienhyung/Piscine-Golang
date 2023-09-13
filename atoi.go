@@ -14,10 +14,10 @@ func Atoi(s string) int {
 		}
 		if c == '-' && nega == 2 {
 			nega = -1
-		} else if c == '-' || c == '+' && nega == -1 || nega == 1 {
-			return 0
 		} else if c == '+' && nega == 2 {
 			nega = 1
+		} else if (c == '-' || c == '+') && (nega == -1 || nega == 1) {
+			return 0
 		}
 	}
 	if nega == 2 {
