@@ -12,11 +12,11 @@ func Atoi(s string) int {
 		if c >= '0' && c <= '9' {
 			non = non*10 + int(c-'0')
 		}
-		if c == '-' && nega == 2 {
+		if c == '-' && nega == 2 && c == rune(s[0]+'0') {
 			nega = -1
-		} else if c == '+' && nega == 2 {
+		} else if c == '+' && nega == 2 && c == rune(s[0]+'0') {
 			nega = 1
-		} else if (c == '-' || c == '+') && (nega == -1 || nega == 1) {
+		} else if (c == '-' || c == '+') && (nega == -1 || nega == 1) && c != rune(s[0]+'0') {
 			return 0
 		}
 	}
