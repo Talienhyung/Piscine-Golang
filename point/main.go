@@ -1,21 +1,23 @@
 package main
 
-import "github.com/01-edu/z01"
+import (
+	"github.com/01-edu/z01"
+)
 
 type point struct {
-	x int
-	y int
+	x string
+	y string
 }
 
 func setPoint(ptr *point) {
-	ptr.x = 42
-	ptr.y = 21
+	ptr.x = "42"
+	ptr.y = "21"
 }
 
 func main() {
 	points := &point{}
 	setPoint(points)
-	printStr("x = 42, y = 21\n")
+	printStr("x = " + points.x + ", y = " + points.y + "\n")
 }
 
 func printStr(s string) {
