@@ -3,8 +3,7 @@ package main
 import "github.com/01-edu/z01"
 
 type Door struct {
-	state   string
-	ptrDoor bool
+	state string
 }
 
 func PrintStr(s string) {
@@ -15,23 +14,27 @@ func PrintStr(s string) {
 
 func OpenDoor(ptrDoor *Door) bool {
 	PrintStr("Door Closing...")
+	z01.PrintRune('\n')
 	ptrDoor.state = "CLOSE"
 	return true
 }
 
 func CloseDoor(ptrDoor *Door) bool {
 	PrintStr("Door Closing...")
+	z01.PrintRune('\n')
 	ptrDoor.state = "CLOSE"
 	return true
 }
 
 func IsDoorOpen(Door *Door) bool {
 	PrintStr("is the Door opened ?")
+	z01.PrintRune('\n')
 	return Door.state == "OPEN"
 }
 
 func IsDoorClose(ptrDoor *Door) bool {
 	PrintStr("is the Door closed ?")
+	z01.PrintRune('\n')
 	return ptrDoor.state == "CLOSE"
 }
 
