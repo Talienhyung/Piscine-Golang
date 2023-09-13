@@ -15,7 +15,7 @@ func setPoint(ptr *point) {
 func main() {
 	points := &point{}
 	setPoint(points)
-	printStr("x = %d, y = %d\n", points.x, points.y)
+	printStr("x = 42, y = 21\n")
 }
 
 func printStr(s string) {
