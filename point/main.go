@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/01-edu/z01"
-)
+import "github.com/01-edu/z01"
 
 type point struct {
 	x int
@@ -17,28 +15,42 @@ func setPoint(ptr *point) {
 func main() {
 	points := &point{}
 	setPoint(points)
-	printRune('x')
-	printRune('=')
-	printInt(points.x)
-	printRune(',')
-	printRune(' ')
-	printRune('y')
-	printRune('=')
-	printInt(points.y)
-	printRune('\n')
+	z01.PrintRune('x')
+	z01.PrintRune(' ')
+	z01.PrintRune('=')
+	z01.PrintRune(' ')
+	IntoRune(points.x)
+	z01.PrintRune(',')
+	z01.PrintRune(' ')
+	z01.PrintRune('y')
+	z01.PrintRune(' ')
+	z01.PrintRune('=')
+	z01.PrintRune(' ')
+	IntoRune(points.y)
+	z01.PrintRune('\n')
 }
 
-func printRune(r rune) {
-	z01.PrintRune(r)
+func check(r int) {
+	c := '0'
+	if r == 0 {
+		z01.PrintRune(c)
+		return
+	}
+	for i := 1; i <= r%10; i++ {
+		c++
+	}
+	for i := -1; i >= r%10; i-- {
+		c++
+	}
+	if r/10 != 0 {
+		check(r / 10)
+	}
+	z01.PrintRune(c)
 }
 
-func printInt(n int) {
+func IntoRune(n int) {
 	if n < 0 {
 		z01.PrintRune('-')
-		n = -n
 	}
-	if n >= 10 {
-		printInt(n / 10)
-	}
-	z01.PrintRune(rune(n%10) + '0')
+	check(n)
 }
