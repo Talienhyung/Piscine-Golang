@@ -14,8 +14,8 @@ func main() {
 		if i != 0 && (runes[j] >= '0' && runes[j] <= '9') {
 			for _, j := range arguments[i] {
 				z01.PrintRune(j)
-				z01.PrintRune('\n')
 			}
+			z01.PrintRune('\n')
 		}
 	}
 	for i := range arguments {
@@ -24,8 +24,8 @@ func main() {
 		if i != 0 && (runes[j] >= 'A' && runes[j] <= 'Z') {
 			for _, j := range arguments[i] {
 				z01.PrintRune(j)
-				z01.PrintRune('\n')
 			}
+			z01.PrintRune('\n')
 		}
 	}
 	for i := range arguments {
@@ -34,8 +34,8 @@ func main() {
 		if i != 0 && (runes[j] >= 'a' && runes[j] <= 'z') {
 			for _, j := range arguments[i] {
 				z01.PrintRune(j)
-				z01.PrintRune('\n')
 			}
+			z01.PrintRune('\n')
 		}
 	}
 }
