@@ -48,7 +48,7 @@ func main() {
 func SortArgs(args []rune) {
 	for i := 0; i < len(args); i++ {
 		for j := i + 1; j < len(args); j++ {
-			if args[i] < args[j] {
+			if args[i] > args[j] {
 				args[i], args[j] = args[j], args[i]
 			}
 		}
