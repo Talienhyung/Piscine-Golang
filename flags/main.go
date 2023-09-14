@@ -18,6 +18,7 @@ func main() {
 		fmt.Println("--order")
 		fmt.Println("  -o")
 		fmt.Println("	This flag will behave like a boolean, if it is called it will order the argument.")
+		return
 	}
 	if args[0] == "--order" || args[0] == "-o" {
 		args = args[1:]
