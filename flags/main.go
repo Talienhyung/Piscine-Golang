@@ -25,12 +25,14 @@ func main() {
 	}
 	list[1] = isinsert(args[0])
 	args = args[1:]
-	if args[0] == "--order" || args[0] == "-o" {
-		args = args[1:]
-		order = true
-	}
 	if len(args) != 0 {
+		if args[0] == "--order" || args[0] == "-o" {
+			args = args[1:]
+			order = true
+		}
 		list[0] = args[0]
+	} else {
+		list[0] = ""
 	}
 	l := list[0] + list[1]
 	newlist := []rune(l)
