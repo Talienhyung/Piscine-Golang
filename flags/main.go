@@ -54,7 +54,7 @@ func isinsert(arg string) string {
 	for j := 0; j < len(arg); j++ {
 		if string(arg[j]) == "=" {
 			for i := 1; i < len(arg); i++ {
-				new += string(arg[i])
+				new += string(arg[i+j])
 			}
 			return new
 		}
