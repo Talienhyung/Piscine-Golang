@@ -14,10 +14,10 @@ func main() {
 	if len(args) == 0 || args[0] == "--help" || args[0] == "-h" {
 		fmt.Println("--insert")
 		fmt.Println("  -i")
-		fmt.Println("	This flag inserts the string into the string passed as argument.")
+		fmt.Println("	 This flag inserts the string into the string passed as argument.")
 		fmt.Println("--order")
 		fmt.Println("  -o")
-		fmt.Println("	This flag will behave like a boolean, if it is called it will order the argument.")
+		fmt.Println("	 This flag will behave like a boolean, if it is called it will order the argument.")
 		return
 	}
 	if args[0] == "--order" || args[0] == "-o" {
