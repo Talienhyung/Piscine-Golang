@@ -11,10 +11,7 @@ func main() {
 	var list [2]string
 	args := os.Args[1:]
 	order := false
-	if len(args) > 0 && args[0] == "--insert" || args[0] == "-i" {
-		args = args[1:]
-		list[1] = args[0]
-	}
+	args[0] = isinsert(args[0])
 	if len(args) > 0 && args[0] == "--order" || args[0] == "-o" {
 		args = args[1:]
 		order = true
@@ -47,4 +44,17 @@ func SortArgs(args []rune) {
 			}
 		}
 	}
+}
+
+func isinsert(arg string) string {
+	mot := "--insert="
+	for j := 1; j < len(mot); j++ {
+		if j >= len(arg) || arg[j] != mot[j] {
+			return arg
+		}
+		if string(arg[j]) == "=" {
+			return arg[j:]
+		}
+	}
+	return arg
 }
