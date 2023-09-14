@@ -8,6 +8,9 @@ import (
 
 func main() {
 	args := os.Args[1:]
+	if args[0] == "" {
+		return
+	}
 	upper := false
 	if len(args) > 0 && args[0] == "--upper" {
 		upper = true
