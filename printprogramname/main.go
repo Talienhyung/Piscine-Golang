@@ -1,7 +1,7 @@
 package main
 
 import (
-	"os" //library
+	"os"
 
 	"github.com/01-edu/z01"
 )
