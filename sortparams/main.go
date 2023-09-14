@@ -8,7 +8,6 @@ import (
 
 func main() {
 	arguments := os.Args
-
 	for i := range arguments {
 		runes := []rune(arguments[i])
 		j := 0
@@ -39,5 +38,4 @@ func main() {
 			}
 		}
 	}
-
 }
