@@ -2,29 +2,39 @@ package main
 
 import (
 	"os"
+
+	"github.com/01-edu/z01"
 )
 
 func main() {
 	args := os.Args[1:]
 	if len(args) < 1 {
-		println()
+		z01.PrintRune('\n')
 		return
 	}
 	for i, arg := range args {
 		mirroredArg := mirrorVowels(arg)
-		print(mirroredArg)
+		for _, r := range mirroredArg {
+			z01.PrintRune(r)
+		}
 		if i < len(args)-1 {
-			print(" ")
+			z01.PrintRune(' ')
 		}
 	}
-	println()
+	z01.PrintRune('\n')
 }
 
 func mirrorVowels(s string) string {
 	sRunes := []rune(s)
-	for i := 0; i < len(sRunes)/2; i++ {
-		if isVowel(sRunes[i]) && isVowel(sRunes[len(sRunes)-1-i]) {
-			sRunes[i], sRunes[len(sRunes)-1-i] = sRunes[len(sRunes)-1-i], sRunes[i]
+	for i, j := 0, len(sRunes)-1; i < j; {
+		if isVowel(sRunes[i]) && isVowel(sRunes[j]) {
+			sRunes[i], sRunes[j] = sRunes[j], sRunes[i]
+			i++
+			j--
+		} else if !isVowel(sRunes[i]) {
+			i++
+		} else if !isVowel(sRunes[j]) {
+			j--
 		}
 	}
 	return string(sRunes)
