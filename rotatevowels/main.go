@@ -6,12 +6,10 @@ import (
 
 func main() {
 	args := os.Args[1:]
-
 	if len(args) < 1 {
 		println()
 		return
 	}
-
 	for i, arg := range args {
 		mirroredArg := mirrorVowels(arg)
 		print(mirroredArg)
@@ -24,13 +22,11 @@ func main() {
 
 func mirrorVowels(s string) string {
 	sRunes := []rune(s)
-
 	for i := 0; i < len(sRunes)/2; i++ {
 		if isVowel(sRunes[i]) && isVowel(sRunes[len(sRunes)-1-i]) {
 			sRunes[i], sRunes[len(sRunes)-1-i] = sRunes[len(sRunes)-1-i], sRunes[i]
 		}
 	}
-
 	return string(sRunes)
 }
 
