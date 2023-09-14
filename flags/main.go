@@ -19,14 +19,14 @@ func main() {
 		fmt.Println("  -o")
 		fmt.Println("	This flag will behave like a boolean, if it is called it will order the argument.")
 	}
-	list[0] = isinsert(args[0])
+	list[1] = isinsert(args[0])
 	args = args[1:]
 	if args[0] == "--order" || args[0] == "-o" {
 		args = args[1:]
 		order = true
 	}
 	if len(args) != 0 {
-		list[1] = args[0]
+		list[0] = args[0]
 	}
 	l := list[0] + list[1]
 	newlist := []rune(l)
@@ -51,12 +51,16 @@ func SortArgs(args []rune) {
 
 func isinsert(arg string) string {
 	mot := "--insert="
+	new := ""
 	for j := 0; j < len(arg); j++ {
 		if arg[j] != mot[j] {
-			return arg
+			return "no"
 		}
 		if string(arg[j]) == "=" {
-			return arg[j:]
+			for i := 0; i <= j; i++ {
+				new += string(arg[j])
+			}
+			return new
 		}
 	}
 	return arg
