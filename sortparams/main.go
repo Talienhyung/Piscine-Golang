@@ -12,6 +12,10 @@ func main() {
 		for j, b := range args {
 			if a[0] < b[0] {
 				args[i], args[j] = args[j], args[i]
+			} else if a[0] == b[0] {
+				if a[1] < b[1] {
+					args[i], args[j] = args[j], args[i]
+				}
 			}
 		}
 	}
