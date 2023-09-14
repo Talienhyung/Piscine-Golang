@@ -50,12 +50,8 @@ func SortArgs(args []rune) {
 }
 
 func isinsert(arg string) string {
-	mot := "--insert="
 	new := ""
 	for j := 0; j < len(arg); j++ {
-		if arg[j] != mot[j] {
-			return "no"
-		}
 		if string(arg[j]) == "=" {
 			for i := 0; i <= j; i++ {
 				new += string(arg[j])
