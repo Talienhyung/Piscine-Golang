@@ -13,8 +13,12 @@ func printStr(s string) {
 	z01.PrintRune('\n')
 }
 
+func even(nbr int) bool {
+	return nbr%2 == 0
+}
+
 func isEven(nbr int) bool {
-	if nbr == 1 {
+	if even(nbr) {
 		return true
 	} else {
 		return false
