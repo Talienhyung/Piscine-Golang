@@ -49,7 +49,6 @@ func rassemblement(tab []string) string {
 		} else {
 			phrase += b
 		}
-
 	}
 	return phrase
 }
