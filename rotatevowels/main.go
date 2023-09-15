@@ -7,39 +7,56 @@ import (
 )
 
 func main() {
+	var tab []rune
 	args := os.Args[1:]
-	if len(args) < 1 {
-		z01.PrintRune('\n')
-		return
-	}
-	for i, arg := range args {
-		mirroredArg := mirrorVowels(arg)
-		for _, r := range mirroredArg {
-			z01.PrintRune(r)
-		}
-		if i < len(args)-1 {
-			z01.PrintRune(' ')
+	for _, j := range args {
+		for _, l := range j {
+			if estVoyelle(l) {
+				tab = append(tab, l)
+			}
 		}
 	}
-	z01.PrintRune('\n')
+	newVoyelle := tabEnvers(tab)
+	newPhrase := grandremplacement(rassemblement(args), newVoyelle)
+	for i := range newPhrase {
+		z01.PrintRune(rune(newPhrase[i]))
+	}
 }
 
-func mirrorVowels(s string) string {
-	sRunes := []rune(s)
-	for i, j := 0, len(sRunes)-1; i < j; {
-		if isVowel(sRunes[i]) && isVowel(sRunes[j]) {
-			sRunes[i], sRunes[j] = sRunes[j], sRunes[i]
-			i++
-			j--
-		} else if !isVowel(sRunes[i]) {
-			i++
-		} else if !isVowel(sRunes[j]) {
-			j--
-		}
+func estVoyelle(s rune) bool {
+	if s == 'a' || s == 'A' || s == 'e' || s == 'E' || s == 'i' || s == 'I' || s == 'o' || s == 'O' || s == 'u' || s == 'U' {
+		return true
+	} else {
+		return false
 	}
-	return string(sRunes)
 }
 
-func isVowel(r rune) bool {
-	return r == 'a' || r == 'e' || r == 'i' || r == 'o' || r == 'u' || r == 'A' || r == 'E' || r == 'I' || r == 'O' || r == 'U'
+func tabEnvers(tab []rune) []string {
+	var newTab []string
+	for w := len(tab) - 1; w >= 0; w-- {
+		newTab = append(newTab, string(tab[w]))
+	}
+	return newTab
+}
+
+func rassemblement(tab []string) string {
+	phrase := ""
+	for _, b := range tab {
+		phrase += b
+	}
+	return phrase
+}
+
+func grandremplacement(phrase string, tab []string) string {
+	i := 0
+	newPhrase := ""
+	for j := range phrase {
+		if estVoyelle(rune(phrase[j])) {
+			newPhrase += tab[i]
+			i++
+		} else {
+			newPhrase += string(phrase[j])
+		}
+	}
+	return newPhrase
 }
