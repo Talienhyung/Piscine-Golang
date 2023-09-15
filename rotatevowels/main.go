@@ -21,6 +21,7 @@ func main() {
 	for i := range newPhrase {
 		z01.PrintRune(rune(newPhrase[i]))
 	}
+	z01.PrintRune('\n')
 }
 
 func estVoyelle(s rune) bool {
