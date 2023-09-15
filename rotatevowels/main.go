@@ -42,8 +42,14 @@ func tabEnvers(tab []rune) []string {
 
 func rassemblement(tab []string) string {
 	phrase := ""
-	for _, b := range tab {
-		phrase += b
+	for i, b := range tab {
+		if i != len(tab) {
+			phrase += b
+			phrase += " "
+		} else {
+			phrase += b
+		}
+
 	}
 	return phrase
 }
