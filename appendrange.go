@@ -7,4 +7,5 @@ func AppendRange(min, max int) []int {
 			tab = append(tab, i)
 		}
 	}
+	return tab
 }
