@@ -1,10 +1,33 @@
 package piscine
 
-func IsSorted(f func(a, b int) int, a []int) bool {
-	for i := 0; i < len(a)-1; i++ {
-		if f(a[i], a[i+1]) < 0 {
-			return false
+func IsSorted(f func(int, int) int, arr []int) bool {
+
+	cesce := true
+	decresce := true
+
+	for i := 1; i < Lent4(arr); i++ {
+		if !(f(arr[i-1], arr[i]) >= 0) {
+			cesce = false
 		}
 	}
-	return true
+
+	for i := 1; i < Lent4(arr); i++ {
+		if !(f(arr[i-1], arr[i]) <= 0) {
+			decresce = false
+		}
+	}
+	return cesce || decresce
+
+}
+func F(a, b int) int {
+	if a > b {
+		return 1
+	} else if a == b {
+		return 0
+	} else {
+		return -1
+	}
+}
+func Lent4(d []int) int {
+	return len(d)
 }
