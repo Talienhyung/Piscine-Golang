@@ -7,8 +7,6 @@ func PrintWordsTables(a []string) {
 		if len(a)-1 != i {
 			printstr(a[i])
 			z01.PrintRune('\n')
-		} else {
-			printstr(a[i])
 		}
 	}
 }
