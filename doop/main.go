@@ -17,7 +17,9 @@ func main() {
 	} else if args[1] == "%" && args[2] == "0" {
 		os.Stdout.WriteString("No modulo by 0")
 	} else {
-		os.Stdout.WriteString(string(rune(multpicaption(StringtoInt(args[0]), args[1], StringtoInt(args[2]))) + '0'))
+		resultat := multpicaption(StringtoInt(args[0]), args[1], StringtoInt(args[2]))
+		resutat2 := intToString(resultat)
+		os.Stdout.WriteString(resutat2)
 	}
 }
 
@@ -27,6 +29,24 @@ func StringtoInt(s string) int {
 		into = into*10 + int(i-'0')
 	}
 	return into
+}
+
+func intToString(n int) string {
+	if n == 0 {
+		return "0"
+	}
+	sign := ""
+	if n < 0 {
+		sign = "-"
+		n = -n
+	}
+	result := ""
+	for n > 0 {
+		digit := n % 10
+		result = string('0'+digit) + result
+		n /= 10
+	}
+	return sign + result
 }
 
 func multpicaption(ch1 int, div string, ch2 int) int {
