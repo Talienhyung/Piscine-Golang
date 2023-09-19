@@ -74,13 +74,11 @@ import (
 func main() {
 	args := os.Args[1:] // Récupérer tous les arguments en ligne de commande
 	if len(args) != 3 {
-		os.Stdout.WriteString("Usage: calculatrice <nombre1> <opérateur> <nombre2>\n")
 		return
 	}
 	ch1 := stringToInt(args[0])
 	ch2 := stringToInt(args[2])
 	if ch1 == -1 || ch2 == -1 {
-		os.Stdout.WriteString("Erreur lors de la conversion des nombres\n")
 		return
 	}
 	switch args[1] {
@@ -113,7 +111,7 @@ func main() {
 			os.Stdout.WriteString(resutat2 + "\n")
 		}
 	default:
-		os.Stdout.WriteString("Opérateur non valide\n")
+		return
 	}
 }
 
@@ -121,10 +119,12 @@ func stringToInt(s string) int {
 	into := 0
 	nega := 1
 
-	for _, i := range s {
+	for j, i := range s {
 		if i < '0' || i > '9' {
-			if string(s[0]) == "-" {
+			if i == '-' && j == 0 || i == '+' && j == 0 {
 				nega = -1
+			} else {
+				return -1
 			}
 		} else {
 			into = into*10 + int(i-'0')
