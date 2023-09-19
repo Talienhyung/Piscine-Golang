@@ -102,7 +102,7 @@ func main() {
 		} else {
 			resultat := multpicaption(ch1, args[1], ch2)
 			resutat2 := intToString(resultat)
-			os.Stdout.WriteString(resutat2)
+			os.Stdout.WriteString(resutat2 + "\n")
 		}
 	case "%":
 		if ch2 == 0 {
