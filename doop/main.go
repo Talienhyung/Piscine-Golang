@@ -4,7 +4,7 @@ import (
 	"os"
 )
 
-func Doop() {
+func main() {
 	args := os.Args[:1]
 	if len(args) > 3 || len(args) < 3 {
 		return
