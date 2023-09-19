@@ -7,13 +7,8 @@ import (
 )
 
 func main() {
-	// Récupérer les arguments de la ligne de commande
 	args := os.Args[1:]
-
-	// Trier les arguments en ordre ASCII
 	sortArgs(args)
-
-	// Imprimer les arguments triés
 	for _, arg := range args {
 		for _, char := range arg {
 			z01.PrintRune(char)

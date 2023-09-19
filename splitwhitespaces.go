@@ -4,7 +4,7 @@ func SplitWhiteSpaces(s string) []string {
 	words := make([]string, 0)
 	currentWord := ""
 	for _, char := range s {
-		if char == ' ' || char == '\t' || char == '\n' {
+		if char == ' ' {
 			if currentWord != "" {
 				words = append(words, currentWord)
 				currentWord = ""

@@ -18,7 +18,7 @@ func Doop() {
 	} else if args[1] == "%" && args[2] == "0" {
 		fmt.Println("No modulo by 0")
 	} else {
-		fmt.Println(multpicaption(StringtoInt(args[0]), args[1], StringtoInt(args[2])))
+		os.Stdout.WriteString(string(rune(multpicaption(StringtoInt(args[0]), args[1], StringtoInt(args[2]))) + '0'))
 	}
 }
 
