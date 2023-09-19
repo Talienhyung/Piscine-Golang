@@ -85,7 +85,7 @@ func main() {
 	case "+":
 		resultat := multpicaption(ch1, args[1], ch2)
 		resutat2 := intToString(resultat)
-		if resultat >= 9223372036854775806 || resultat < -9223372036854775808 {
+		if resultat >= 9223372036854775805 || resultat < -9223372036854775808 {
 			return
 		} else if resutat2 == "-" {
 			return
@@ -94,7 +94,7 @@ func main() {
 	case "-":
 		resultat := multpicaption(ch1, args[1], ch2)
 		resutat2 := intToString(resultat)
-		if resultat >= 9223372036854775806 || resultat < -9223372036854775808 {
+		if resultat >= 9223372036854775805 || resultat < -9223372036854775808 {
 			return
 		} else if resutat2 == "-" {
 			return
@@ -103,7 +103,7 @@ func main() {
 	case "*":
 		resultat := multpicaption(ch1, args[1], ch2)
 		resutat2 := intToString(resultat)
-		if resultat >= 9223372036854775806 || resultat < -9223372036854775808 {
+		if resultat >= 9223372036854775805 || resultat < -9223372036854775808 {
 			return
 		} else if resutat2 == "-" {
 			return
@@ -115,7 +115,7 @@ func main() {
 		} else {
 			resultat := multpicaption(ch1, args[1], ch2)
 			resutat2 := intToString(resultat)
-			if resultat >= 9223372036854775806 || resultat < -9223372036854775808 {
+			if resultat >= 9223372036854775805 || resultat < -9223372036854775808 {
 				return
 			} else if resutat2 == "-" {
 				return
@@ -128,7 +128,7 @@ func main() {
 		} else {
 			resultat := multpicaption(ch1, args[1], ch2)
 			resutat2 := intToString(resultat)
-			if resultat >= 9223372036854775806 || resultat < -9223372036854775808 {
+			if resultat >= 9223372036854775805 || resultat < -9223372036854775808 {
 				return
 			} else if resutat2 == "-" {
 				return
