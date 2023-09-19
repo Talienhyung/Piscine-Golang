@@ -87,6 +87,8 @@ func main() {
 		resutat2 := intToString(resultat)
 		if resultat > 9223372036854775807 || resultat < -9223372036854775808 {
 			return
+		} else if resutat2 == "-" {
+			return
 		}
 		os.Stdout.WriteString(resutat2 + "\n")
 	case "-":
@@ -94,12 +96,16 @@ func main() {
 		resutat2 := intToString(resultat)
 		if resultat > 9223372036854775807 || resultat < -9223372036854775808 {
 			return
+		} else if resutat2 == "-" {
+			return
 		}
 		os.Stdout.WriteString(resutat2 + "\n")
 	case "*":
 		resultat := multpicaption(ch1, args[1], ch2)
 		resutat2 := intToString(resultat)
 		if resultat > 9223372036854775807 || resultat < -9223372036854775808 {
+			return
+		} else if resutat2 == "-" {
 			return
 		}
 		os.Stdout.WriteString(resutat2 + "\n")
@@ -111,6 +117,8 @@ func main() {
 			resutat2 := intToString(resultat)
 			if resultat > 9223372036854775807 || resultat < -9223372036854775808 {
 				return
+			} else if resutat2 == "-" {
+				return
 			}
 			os.Stdout.WriteString(resutat2 + "\n")
 		}
@@ -121,6 +129,8 @@ func main() {
 			resultat := multpicaption(ch1, args[1], ch2)
 			resutat2 := intToString(resultat)
 			if resultat > 9223372036854775807 || resultat < -9223372036854775808 {
+				return
+			} else if resutat2 == "-" {
 				return
 			}
 			os.Stdout.WriteString(resutat2 + "\n")
