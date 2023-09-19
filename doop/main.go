@@ -75,6 +75,8 @@ func main() {
 	args := os.Args[1:] // Récupérer tous les arguments en ligne de commande
 	if len(args) != 3 {
 		return
+	} else if stringToInt(args[0]) >= 9223372036854775807 || stringToInt(args[2]) >= 9223372036854775807 || stringToInt(args[0]) <= -9223372036854775808 || stringToInt(args[2]) <= -9223372036854775808 {
+		return
 	}
 	ch1 := stringToInt(args[0])
 	ch2 := stringToInt(args[2])
@@ -118,7 +120,6 @@ func main() {
 func stringToInt(s string) int {
 	into := 0
 	nega := 1
-
 	for j, i := range s {
 		if i < '0' || i > '9' {
 			if i == '-' && j == 0 || i == '+' && j == 0 {
