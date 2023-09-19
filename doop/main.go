@@ -75,12 +75,10 @@ func main() {
 	args := os.Args[1:] // Récupérer tous les arguments en ligne de commande
 	if len(args) != 3 {
 		return
-	} else if stringToInt(args[0]) >= 9223372036854775807 || stringToInt(args[2]) >= 9223372036854775807 || stringToInt(args[0]) <= -9223372036854775808 || stringToInt(args[2]) <= -9223372036854775808 {
-		return
 	}
 	ch1 := stringToInt(args[0])
 	ch2 := stringToInt(args[2])
-	if ch1 == -1 || ch2 == -1 {
+	if ch1 == -1 || ch2 == -1 || ch2 >= 9223372036854775807 || ch1 >= 9223372036854775807 || ch1 <= -9223372036854775808 || ch2 <= -9223372036854775808 {
 		return
 	}
 	switch args[1] {
