@@ -119,13 +119,18 @@ func main() {
 
 func stringToInt(s string) int {
 	into := 0
+	nega := 1
+
 	for _, i := range s {
 		if i < '0' || i > '9' {
-			return -1 // Erreur de conversion
+			if string(s[0]) == "-" {
+				nega = -1
+			}
+		} else {
+			into = into*10 + int(i-'0')
 		}
-		into = into*10 + int(i-'0')
 	}
-	return into
+	return into * nega
 }
 
 func intToString(n int) string {
