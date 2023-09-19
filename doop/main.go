@@ -75,7 +75,7 @@ func main() {
 	args := os.Args[1:] // Récupérer tous les arguments en ligne de commande
 	if len(args) != 3 {
 		return
-	} else if args[0] >= "9223372036854775807" || args[2] >= "9223372036854775807" || args[0] <= "-9223372036854775808" || args[2] <= "-9223372036854775808" {
+	} else if stringToInt(args[0]) >= 9223372036854775807 || stringToInt(args[2]) >= 9223372036854775807 || stringToInt(args[0]) <= -9223372036854775808 || stringToInt(args[2]) <= -9223372036854775808 {
 		return
 	}
 	ch1 := stringToInt(args[0])
