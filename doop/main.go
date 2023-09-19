@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 )
 
@@ -14,9 +13,9 @@ func Doop() {
 	} else if args[0] >= "9223372036854775807" || args[2] >= "9223372036854775807" || args[0] <= "-9223372036854775809" || args[2] <= "-9223372036854775809" {
 		return
 	} else if args[1] == "/" && args[2] == "0" {
-		fmt.Println("No division by 0")
+		os.Stdout.WriteString("No division by 0")
 	} else if args[1] == "%" && args[2] == "0" {
-		fmt.Println("No modulo by 0")
+		os.Stdout.WriteString("No modulo by 0")
 	} else {
 		os.Stdout.WriteString(string(rune(multpicaption(StringtoInt(args[0]), args[1], StringtoInt(args[2]))) + '0'))
 	}
