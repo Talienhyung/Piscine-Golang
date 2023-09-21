@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	arg := os.Args[:1]
+	arg := os.Args[1:]
 	if len(arg) > 1 {
 		fmt.Println("Too many arguments")
 		return
