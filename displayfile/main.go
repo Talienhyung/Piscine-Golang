@@ -20,5 +20,5 @@ func main() {
 		fmt.Print(err)
 		return
 	}
-	fmt.Print(string(data) + "\n")
+	fmt.Print(string(data))
 }
