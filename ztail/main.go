@@ -13,9 +13,9 @@ func main() {
 	} else if arg[0] != "-c" {
 		return
 	}
-	x := Atoi(arg[1])
 	ok := false
 	for i := 2; i < len(arg); i++ {
+		x := Atoi(arg[1])
 		r := ""
 		if i == 3 {
 			truc = "\n"
