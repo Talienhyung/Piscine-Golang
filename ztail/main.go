@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	truc := "\n"
+	truc := ""
 	arg := os.Args[1:]
 	if len(arg) == 0 {
 		return
@@ -17,14 +17,14 @@ func main() {
 	r := ""
 	ok := false
 	for i := 2; i < len(arg); i++ {
-		if i == len(arg)-1 {
-			truc = ""
+		if i == 3 {
+			truc = "\n"
 		}
 		fileName := arg[i]
 		data, err := os.ReadFile(fileName)
 		if err != nil {
 			ok = true
-			fmt.Printf("open " + fileName + ": no such file or directory" + truc + truc)
+			fmt.Printf("open " + fileName + ": no such file or directory\n")
 		} else {
 			if len(data)-x < 0 {
 				x = 0
@@ -34,7 +34,7 @@ func main() {
 			for i := x; i < len(data); i++ {
 				r += string(data[i])
 			}
-			fmt.Printf("==> " + fileName + " <==\n" + r + truc)
+			fmt.Printf(truc + "==> " + fileName + " <==\n" + r)
 		}
 	}
 	if ok {
