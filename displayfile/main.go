@@ -8,10 +8,10 @@ import (
 func main() {
 	arg := os.Args[1:]
 	if len(arg) > 1 {
-		fmt.Print("Too many arguments")
+		fmt.Print("Too many arguments\n")
 		return
 	} else if len(arg) == 0 {
-		fmt.Print("File name missing")
+		fmt.Print("File name missing\n")
 		return
 	}
 	fileName := arg[0]
@@ -20,5 +20,5 @@ func main() {
 		fmt.Print(err)
 		return
 	}
-	fmt.Print(string(data))
+	fmt.Print(string(data) + "\n")
 }
