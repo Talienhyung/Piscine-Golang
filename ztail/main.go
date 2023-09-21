@@ -20,7 +20,7 @@ func main() {
 		if err != nil {
 			fmt.Printf("open " + fileName + ": no such file or directory")
 		} else {
-			for i := len(string(data)) - x; i < len(string(data)); i++ {
+			for i := len(data) - x; i < len(data); i++ {
 				r += string(data[i])
 			}
 			fmt.Printf("==> " + fileName + " <==\n" + r + "\n")
