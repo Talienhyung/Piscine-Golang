@@ -32,7 +32,7 @@ func main() {
 			for i := x; i < len(data); i++ {
 				r += string(data[i])
 			}
-			fmt.Printf("==> " + fileName + " <==\n" + r + "\n")
+			fmt.Printf("==> " + fileName + " <==\n" + r + truc)
 		}
 	}
 }
