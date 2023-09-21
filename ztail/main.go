@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-	truc := "\n"
 	arg := os.Args[1:]
 	if len(arg) == 0 {
 		return
@@ -16,13 +15,10 @@ func main() {
 	x := Atoi(arg[1])
 	r := ""
 	for i := 2; i < len(arg); i++ {
-		if i == len(arg)-1 {
-			truc = ""
-		}
 		fileName := arg[i]
 		data, err := os.ReadFile(fileName)
 		if err != nil {
-			fmt.Printf("open " + fileName + ": no such file or directory" + truc)
+			fmt.Printf("open " + fileName + ": no such file or directory")
 		} else {
 			if len(data)-x < 0 {
 				x = 0
@@ -32,7 +28,7 @@ func main() {
 			for i := x; i < len(data); i++ {
 				r += string(data[i])
 			}
-			fmt.Printf("==> " + fileName + " <==\n" + r + "\n" + truc)
+			fmt.Printf("==> " + fileName + " <==\n" + r)
 		}
 	}
 }
