@@ -1,5 +1,10 @@
 package piscine
 
 func ListClear(l *List) {
-	l.Head.Data = nil
+	cassageDeGueule := l.Head
+	for cassageDeGueule != nil {
+		cassageDeGueule.Data = nil
+		cassageDeGueule = cassageDeGueule.Next
+	}
+	l.Head = nil
 }
