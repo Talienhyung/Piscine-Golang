@@ -13,7 +13,7 @@ package piscine
 func ListReverse(l *List) {
 	ListeAlenvert := &List{}
 	element := l.Head
-	for l != nil {
+	for element != nil {
 		ListPushFront(ListeAlenvert, element.Data)
 		element = element.Next
 	}
