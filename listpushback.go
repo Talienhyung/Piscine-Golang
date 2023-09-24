@@ -1,21 +1,11 @@
 package piscine
 
-type NodeL struct {
-	Data interface{}
-	Next *NodeL
-}
-
-type List struct {
-	Head *NodeL
-	Tail *NodeL
-}
-
 func ListPushBack(l *List, data interface{}) {
 	element := &NodeL{Data: data}
 	if l.Head == nil {
-		l.Head = element
+		l.Tail = element
 	} else {
-		l.Tail.Next = element
+		l.Head.Next = element
 	}
-	l.Tail = element
+	l.Head = element
 }
