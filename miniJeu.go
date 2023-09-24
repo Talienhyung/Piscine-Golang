@@ -78,10 +78,10 @@ func Pierre() {
 		}
 	}
 	if scoreOrdi == 5 {
-		fmt.Println("\n L'ordinateur gagne ! (Sombre merde)")
+		fmt.Println("\nL'ordinateur gagne ! (Sombre merde)")
 	}
 	if scoreUti == 5 {
-		fmt.Println("\nouiTu gagne !! Bravo immense BG !!!")
+		fmt.Println("\nTu gagne !! Bravo immense BG !!!")
 	}
 	if input("\n-----------------------------------------\nVoulez-vous rejouer ?\n-----------------------------------------\n", inputs) == "oui" {
 		Pierre()
