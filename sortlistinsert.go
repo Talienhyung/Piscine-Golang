@@ -23,5 +23,3 @@ func SortListInsert(l *NodeI, data_ref int) *NodeI {
 	ancienneL.Next = nouveauTruc
 	return l
 }
-
-//lol
