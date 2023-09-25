@@ -2,10 +2,11 @@ package piscine
 
 func ListLast(l *List) interface{} {
 	element := l.Tail
-	var answer interface{}
 	for element != nil {
-		answer = l.Tail.Data
 		element = element.Next
+		if element == nil {
+			return l.Tail.Data
+		}
 	}
-	return answer
+	return nil
 }
