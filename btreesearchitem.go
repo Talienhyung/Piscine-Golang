@@ -9,5 +9,5 @@ func BTreeSearchItem(root *TreeNode, elem string) *TreeNode {
 	} else if elem > root.Data {
 		return BTreeSearchItem(root.Right, elem)
 	}
-	return nil
+	return root
 }
